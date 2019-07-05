@@ -57,6 +57,8 @@ RUN apk -U add \
 
 COPY start.sh /start
 
+COPY shairport-sync.conf /usr/local/etc/shairport-sync.conf
+
 ENV AIRPLAY_NAME Docker
 
 ENTRYPOINT [ "/start" ]
