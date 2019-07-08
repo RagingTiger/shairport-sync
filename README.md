@@ -48,3 +48,7 @@ docker start shairport-sync
 * `-e AIRPLAY_NAME=Docker` set the AirPlay device name. If unset it defaults to
 *"Docker"*
 * extra arguments will be passed to shairplay-sync (try `-- help`)
+
+## ToDo
+* Pin os version in base image of dockerfile
+* Add default volume for shairport-sync
