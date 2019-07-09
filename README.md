@@ -46,7 +46,7 @@ docker start shairport-sync
 * `--device /dev/snd` share host alsa system with container. Does not require
 `--privileged` as `-v /dev/snd:/dev/snd` would
 * `-e AIRPLAY_NAME=Docker` set the AirPlay device name. If unset it defaults to
-*"Docker"*
+"Docker"
 * extra arguments will be passed to shairplay-sync (try `-- help`)
 
 ## ToDo
