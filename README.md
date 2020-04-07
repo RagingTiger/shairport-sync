@@ -49,6 +49,38 @@ docker start shairport-sync
 "Docker"
 * extra arguments will be passed to shairplay-sync (try `-- help`)
 
+## Troubleshooting
+A few little tips for getting your setup working
+
+### Configure Audio Group Access
+To set the volume max on your system, please make sure you are first in the
+`audio` group by running the command:
+```
+$ groups $USER
+USER: USER sudo audio docker
+```
+If your output contains the `audio` group, then you already have access. If not
+then run the following:
+```
+sudo usermod -a -G audio $USER
+```
+This will add `$USER` to the audio group (and assumes you have
+`sudo privileges`). **NOTE**: `you must reboot for this change to take effect!`
+
+### Linux Volume Level
+Assuming you have `audio` group privileges (see
+[Configure Audio Group Access](#configure-audio-group-access)), you can adjust
+the volume on linux with the `alsamixer` command:
+```
+$ alsamixer
+```
+which will bring up the following screen:
+<br><br>
+![alsamixer 100%](.static/img/alsamixer.png)
+
+Simply use the `UP/DOWN arrow keys` to set the volume to what you want (here
+it has been set to 100%).
+
 ## ToDo
 * Pin os version in base image of dockerfile
 * Add default volume for shairport-sync
