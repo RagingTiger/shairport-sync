@@ -80,7 +80,3 @@ which will bring up the following screen:
 
 Simply use the `UP/DOWN arrow keys` to set the volume to what you want (here
 it has been set to 100%).
-
-## ToDo
-* Pin os version in base image of dockerfile
-* Add default volume for shairport-sync
