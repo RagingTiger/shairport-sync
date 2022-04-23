@@ -11,7 +11,7 @@ AirPlay devices when used with a compatible multi-room player, such as iTunes or
 ## Multi-arch Image
 The below commands reference a
 [Docker Manifest List](https://docs.docker.com/engine/reference/commandline/manifest/)
-at [`tigerj/shairport-sync`](https://hub.docker.com/r/tigerj/shairport-sync)
+at [`ghcr.io/ragingtiger/shairport-sync:master`](https://github.com/ragingtiger/shairport-sync/pkgs/container/shairport-sync)
 built using Docker's
 [BuildKit](https://docs.docker.com/develop/develop-images/build_enhancements/).
 Simply running commands using this image will pull
@@ -29,7 +29,7 @@ docker run \
        --net=host \
        --device /dev/snd \
        -e AIRPLAY_NAME=shairport-sync \
-       tigerj/shairport-sync
+       ghcr.io/ragingtiger/shairport-sync:master
 ```
 
 ## Create
@@ -41,7 +41,7 @@ docker create \
        --net=host \
        --device /dev/snd \
        -e AIRPLAY_NAME="shairport-sync" \
-       tigerj/shairport-sync
+       ghcr.io/ragingtiger/shairport-sync:master
 ```
 Then run this container by name using `docker start`:
 ```
